@@ -7,7 +7,7 @@ require('dotenv').config();
 // Force Node.js to use Google DNS to bypass local SRV ECONNREFUSED errors
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
-const Expense = require('./models/Expense');
+const Expense = require('../models/Expense');
 
 const app = express();
 
