@@ -21,6 +21,10 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
 // API Routes
+app.get('/', (req, res) => {
+  res.send('Monthly Expense Tracker API is running...');
+});
+
 app.get('/api/expenses', async (req, res) => {
   try {
     let query = {};
